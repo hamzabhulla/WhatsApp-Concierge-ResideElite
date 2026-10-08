@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --c-bg: 243 242 238;
+  --c-surface: 255 255 255;
+  --c-surface-2: 247 246 241;
+  --c-border: 226 224 216;
+  --c-text: 35 42 38;
+  --c-muted: 110 118 112;
+  --c-brand: 47 69 56;
+  --c-brand-soft: 219 229 221;
+  --c-brand-on: 255 255 255;
+  --c-accent: 168 105 63;
+  --c-accent-soft: 240 226 211;
+  --c-success: 74 122 94;
+  --c-danger: 161 68 56;
+  --c-warning: 161 120 53;
+  --c-info: 92 122 147;
+}
+
+.dark {
+  --c-bg: 20 32 26;
+  --c-surface: 28 41 32;
+  --c-surface-2: 36 51 41;
+  --c-border: 52 66 58;
+  --c-text: 236 232 223;
+  --c-muted: 147 160 150;
+  --c-brand: 111 163 130;
+  --c-brand-soft: 40 56 47;
+  --c-brand-on: 16 26 21;
+  --c-accent: 201 133 86;
+  --c-accent-soft: 58 46 37;
+  --c-success: 127 180 151;
+  --c-danger: 224 122 105;
+  --c-warning: 224 176 104;
+  --c-info: 143 176 201;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-base text-ink transition-colors duration-200;
+  }
+  ::selection {
+    @apply bg-brand/25;
+  }
+  *:focus-visible {
+    @apply outline-none ring-2 ring-brand/60 ring-offset-2 ring-offset-base;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-xl border border-line bg-surface shadow-soft;
+  }
+
+  .btn-primary {
+    @apply rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-brand-on transition hover:opacity-90 disabled:opacity-50;
+  }
+
+  .btn-ghost {
+    @apply rounded-lg px-3 py-2 text-sm text-muted transition hover:bg-surface2 hover:text-ink;
+  }
+
+  .btn-outline {
+    @apply rounded-lg border border-line px-4 py-2 text-sm font-semibold text-ink transition hover:bg-surface2 disabled:opacity-50;
+  }
+
+  .input {
+    @apply w-full rounded-lg border border-line bg-surface px-3 py-2 text-sm text-ink placeholder-muted outline-none transition focus:border-brand focus:ring-1 focus:ring-brand;
+  }
+
+  .table-th {
+    @apply px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-muted;
+  }
+
+  .table-td {
+    @apply px-4 py-3 text-sm text-ink;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ring-1 ring-inset;
+  }
+}
+
+/* Recharts tooltip */
+.recharts-default-tooltip {
+  @apply !rounded-lg !border !border-line !bg-surface !shadow-lift;
+}
+
+/* Scrollbar - warm, unobtrusive */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(var(--c-border));
+  border-radius: 999px;
+  border: 2px solid rgb(var(--c-bg));
+}
