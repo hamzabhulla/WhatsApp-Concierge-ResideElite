@@ -18,7 +18,7 @@
   <img alt="React 18" src="https://img.shields.io/badge/React-18-3b5bdb?style=flat-square&labelColor=1f2937">
   <img alt="Supabase" src="https://img.shields.io/badge/backend-Supabase-3b5bdb?style=flat-square&labelColor=1f2937">
   <a href="https://github.com/hamzabhulla/WhatsApp-Concierge-ResideElite/actions/workflows/ci.yml"><img alt="CI status" src="https://img.shields.io/github/actions/workflow/status/hamzabhulla/WhatsApp-Concierge-ResideElite/ci.yml?branch=main&style=flat-square&labelColor=1f2937&label=CI"></a>
-  <img alt="Access: admin only" src="https://img.shields.io/badge/access-admin%20only-3b5bdb?style=flat-square&labelColor=1f2937">
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-3b5bdb?style=flat-square&labelColor=1f2937"></a>
 </p>
 
 </div>
@@ -178,6 +178,10 @@ docs/                   guides and screenshots
 - Add a Content-Security-Policy header tuned to the Supabase domain.
 - Add end-to-end browser tests against a seeded Supabase project.
 - Refresh lists automatically.
+
+## License
+
+Released under the [MIT License](LICENSE).
 
 ## Author
 
